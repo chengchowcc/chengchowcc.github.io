@@ -27,7 +27,7 @@ a:hover {
 .navbar {
   background-color: #f8f8f8;
   border-bottom: 1px solid #eee;
-  padding: 20px 0;
+  padding: 40px 0;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -44,8 +44,12 @@ a:hover {
 }
 .nav-links a {
   margin-left: 20px;
-  color: #444;
+  color: #888;
   font-weight: 500;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: #000;
 }
 
 /* === 横幅图片区域 === */
