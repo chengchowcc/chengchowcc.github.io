@@ -27,7 +27,7 @@ a:hover {
 .navbar {
   background-color: #f8f8f8;
   border-bottom: 1px solid #eee;
-  padding: 200px 0;
+  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -37,7 +37,7 @@ a:hover {
   font-weight: bold;
   letter-spacing: 1px;
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 100px;
 }
 .nav-links {
   display: inline-block;
