@@ -1,75 +1,111 @@
+/* === 全局设置 === */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  display: flex;
-  font-family: sans-serif;
-  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
   color: #333;
-}
-.sidebar {
-  width: 250px;
-  background-color: #222;
-  color: white;
-  height: 100vh;
-  padding: 20px;
-  position: fixed;
-}
-.sidebar h1 {
-  font-size: 20px;
-  margin: 20px 0;
-}
-.sidebar nav a {
-  display: block;
-  color: #ccc;
-  text-decoration: none;
-  margin: 10px 0;
-}
-.sidebar nav a:hover {
-  color: white;
-}
-.avatar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
-.content {
-  margin-left: 270px;
-  padding: 40px;
-  max-width: 800px;
-}
-.content section {
-  margin-bottom: 40px;
-}
-.content h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-.content p, .content li {
   line-height: 1.6;
 }
-.content a {
-  color: #0077cc;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+a {
+  color: #0066cc;
   text-decoration: none;
 }
-.content a:hover {
+a:hover {
   text-decoration: underline;
 }
 
+/* === 顶部导航栏 === */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-right: 40px;
+}
+.nav-links {
+  display: inline-block;
+}
+.nav-links a {
+  margin-left: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* === 横幅图片区域 === */
+.hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* === 主体内容区布局 === */
+.main-content {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.left-column {
+  flex: 1 1 250px;
+  text-align: center;
+}
+.left-column .avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.title-block {
+  font-size: 14px;
+  color: #666;
+}
+
+.right-column {
+  flex: 2 1 600px;
+}
+.right-column h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.right-column ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+/* === 响应式支持 === */
 @media (max-width: 768px) {
-  .sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
+  .main-content {
+    flex-direction: column;
+  }
+  .navbar {
     text-align: center;
   }
-  .content {
-    margin-left: 0;
-    padding: 20px;
+  .nav-links {
+    display: block;
+    margin-top: 10px;
+  }
+  .nav-links a {
+    display: inline-block;
+    margin: 5px 10px;
   }
 }
