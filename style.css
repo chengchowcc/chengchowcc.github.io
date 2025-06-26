@@ -37,7 +37,7 @@ a:hover {
   font-weight: bold;
   letter-spacing: 1px;
   display: inline-block;
-  margin-right: 100px;
+  margin-right: 400px;
 }
 .nav-links {
   display: inline-block;
@@ -72,8 +72,8 @@ a:hover {
   text-align: center;
 }
 .left-column .avatar {
-  width: 160px;
-  height: 160px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
