@@ -2,54 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CHENG CHOW</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHENG CHOW</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="sidebar">
-    <div class="avatar">
-      <img src="assets/avatar.jpg" alt="CHENG CHOW" />
+  <!-- 顶部导航栏 -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="site-title">CHENG CHOW</h1>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#cv">CV</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#hobbies">Hobbies</a>
+      </nav>
     </div>
-    <h1>CHENG CHOW</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#cv">CV</a>
-      <a href="#research">Research</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#hobbies">Hobbies</a>
-    </nav>
-  </div>
+  </header>
 
-  <div class="content">
-    <section id="home">
-      <h2>Welcome</h2>
-      <p>This is the personal website of CHENG CHOW. Content will be added gradually.</p>
-    </section>
+  <!-- 横幅图片（用户自行上传） -->
+  <section class="hero-image">
+    <img src="assets/banner.jpg" alt="Banner image" />
+  </section>
 
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <p>You can download my CV <a href="resume/chengchow_cv.pdf" target="_blank">here</a>.</p>
-    </section>
+  <!-- 主体内容 -->
+  <main class="main-content container" id="home">
+    <div class="left-column">
+      <img class="avatar" src="assets/avatar.jpg" alt="CHENG CHOW portrait" />
+      <div class="title-block">
+        <p><strong>PhD Student</strong><br/>Steve Hicks School of Social Work<br/>The University of Texas at Austin</p>
+      </div>
+    </div>
 
-    <section id="research">
-      <h2>Research</h2>
-      <ul>
-        <li><a href="https://doi.org/10.3390/healthcare13101097" target="_blank">Shifting SDOH practice – Healthcare (2025)</a></li>
-        <li><a href="https://doi.org/10.1016/j.healthpol.2025.105267" target="_blank">Immigrant Health Policy – Health Policy (2025)</a></li>
-        <li><a href="https://doi.org/10.1080/1369183X.2024.2328578" target="_blank">Thai Youth & Migration – JEMS (2024)</a></li>
-      </ul>
-    </section>
+    <div class="right-column">
+      <section class="bio">
+        <p>
+          Cheng Chow is a PhD student in Social Work at the University of Texas at Austin.
+          His research focuses on <a href="#research">immigration, health disparities</a>, and
+          social policy, especially among Asian and Asian American populations. You can
+          download his <a href="resume/chengchow_cv.pdf" target="_blank">CV here</a>.
+        </p>
+      </section>
 
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <p>Teaching information will be updated soon.</p>
-    </section>
-
-    <section id="hobbies">
-      <h2>Hobbies</h2>
-      <p>Hobbies and personal interests will be shared here later.</p>
-    </section>
-  </div>
+      <section class="news">
+        <h2>News and Updates</h2>
+        <ul>
+          <li>[2025.06] Paper accepted at <a href="https://doi.org/10.3390/healthcare13101097" target="_blank">Healthcare</a></li>
+          <li>[2025.05] Presented at APHA 2025 in Washington D.C.</li>
+          <li>[2024.11] Launched new project on Asian immigrant health.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
