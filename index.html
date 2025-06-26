@@ -2,68 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CHENG CHOW</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- 顶部导航栏 -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="site-title">CHENG CHOW</h1>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#cv">CV</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#hobbies">Hobbies</a>
-      </nav>
+  <nav class="navbar container">
+    <div class="site-title">CHENG CHOW</div>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/cv.html">CV</a>
+      <a href="/research.html">Research</a>
+      <a href="/teaching.html">Teaching</a>
+      <a href="/hobbies.html">Hobbies</a>
     </div>
-  </header>
+  </nav>
 
-  <!-- 横幅图片（用户自行上传） -->
-  <section class="hero-image">
+  <!-- 横幅图 -->
+  <div class="hero-image">
     <img src="assets/banner.jpg" alt="Banner image" />
-  </section>
+  </div>
 
-  <!-- 主体内容 -->
-  <main class="main-content container" id="home">
+  <!-- 主体区域 -->
+  <div class="container main-content">
     <div class="left-column">
       <img class="avatar" src="assets/avatar.jpg" alt="CHENG CHOW portrait" />
       <div class="title-block">
-        <p><strong>PhD Student</strong><br/>Steve Hicks School of Social Work<br/>The University of Texas at Austin</p>
+        <strong>PhD Student</strong><br/>
+        Steve Hicks School of Social Work<br/>
+        The University of Texas at Austin
       </div>
     </div>
 
     <div class="right-column">
-      <section class="bio">
-        <p>
-          Cheng Chow is a PhD student in Social Work at the University of Texas at Austin.
-          His research focuses on <a href="#research">immigration, health disparities</a>, and
-          social policy, especially among Asian and Asian American populations. You can
-          download his <a href="resume/chengchow_cv.pdf" target="_blank">CV here</a>.
-        </p>
-      </section>
+      <p>
+        Cheng Chow is a PhD student in Social Work at the University of Texas at Austin. His research focuses on 
+        <a href="https://example.com">immigration</a>, 
+        <a href="https://example.com">health disparities</a>, 
+        and social policy, especially among Asian and Asian American populations.
+        You can download his <a href="resume/chengchow_cv.pdf">CV here</a>.
+      </p>
 
-      <section class="news">
-        <h2>News and Updates</h2>
-        <ul>
-          <li>[2025.06] Paper accepted at <a href="https://doi.org/10.3390/healthcare13101097" target="_blank">Healthcare</a></li>
-          <li>[2025.05] Presented at APHA 2025 in Washington D.C.</li>
-          <li>[2024.11] Launched new project on Asian immigrant health.</li>
-        </ul>
-      </section>
+      <h2>News and Updates</h2>
+      <ul>
+        <li>[2025.06] Paper accepted at <a href="https://example.com">Healthcare</a></li>
+        <li>[2025.05] Presented at APHA 2025 in Washington D.C.</li>
+        <li>[2024.11] Launched new project on Asian immigrant health.</li>
+      </ul>
     </div>
-  </main>
-  <script>
-  const path = window.location.pathname;
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    if (link.getAttribute('href') === path || path === '/' && link.getAttribute('href') === '/index.html') {
-      link.classList.add('active');
-    }
-  });
-</script>
+  </div>
 
+  <!-- 自动高亮当前导航项 -->
+  <script>
+    const path = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === path || (path === '/' && href.endsWith('index.html'))) {
+        link.classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>
