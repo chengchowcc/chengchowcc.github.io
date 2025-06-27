@@ -103,13 +103,49 @@ a:hover {
   padding-left: 20px;
   list-style: disc;
 }
+/* 折叠块样式美化 */
 details summary {
   cursor: pointer;
-  font-size: 16px;
-  margin: 20px 0 10px;
-}
-details ul {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  list-style: none;
+  position: relative;
   padding-left: 20px;
+  transition: color 0.3s;
+}
+
+details summary:hover {
+  color: #0066cc;
+}
+
+details[open] summary::before {
+  content: "▼";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 14px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+details:not([open]) summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 14px;
+  transform: rotate(0deg);
+}
+
+details ul {
+  margin: 10px 0 20px 20px;
+  padding-left: 20px;
+  border-left: 2px solid #eee;
+}
+
+details ul li {
+  margin-bottom: 10px;
 }
 
 /* === 页脚样式 === */
