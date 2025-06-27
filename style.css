@@ -67,7 +67,6 @@ a:hover {
 }
 
 
-
 /* === 主体内容区布局 === */
 .main-content {
   display: flex;
@@ -103,6 +102,14 @@ a:hover {
 .right-column ul {
   padding-left: 20px;
   list-style: disc;
+}
+details summary {
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px 0 10px;
+}
+details ul {
+  padding-left: 20px;
 }
 
 /* === 页脚样式 === */
