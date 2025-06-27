@@ -115,12 +115,8 @@ details summary {
   transition: color 0.3s;
 }
 
-details summary:hover {
-  color: #0066cc;
-}
-
 details summary::-webkit-details-marker {
-  display: none; /* 隐藏浏览器默认的下拉箭头（Chrome/Safari） */
+  display: none;
 }
 
 details[open] summary::before {
@@ -129,7 +125,6 @@ details[open] summary::before {
   left: 0;
   top: 1px;
   font-size: 14px;
-  transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
 
@@ -139,7 +134,6 @@ details:not([open]) summary::before {
   left: 0;
   top: 1px;
   font-size: 14px;
-  transform: rotate(0deg);
 }
 
 details ul {
