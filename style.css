@@ -57,12 +57,12 @@ a:hover {
 }
 
 /* === 横幅图片区域 === */
-.hero-image img {
+.banner {
   width: 100%;
   height: 200px;
-  object-fit: cover;
-  display: block;
+  background: url("banner.png") center center / cover no-repeat;
 }
+
 
 /* === 主体内容区布局 === */
 .main-content {
