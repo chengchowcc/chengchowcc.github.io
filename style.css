@@ -84,6 +84,7 @@ a:hover {
   height: 240px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   margin-bottom: 15px;
   border: 1px solid #ccc;
 }
