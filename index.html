@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CHENG CHOW</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1>CHENG CHOW</h1>
-      <nav>
-        <ul class="nav">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="hobbies.html">Hobbies</a></li>
-        </ul>
-      </nav>
+
+  <!-- 顶部导航栏 -->
+  <nav class="navbar container">
+    <div class="site-title">CHENG CHOW</div>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/cv.html">CV</a>
+      <a href="/research.html">Research</a>
+      <a href="/teaching.html">Teaching</a>
+      <a href="/hobbies.html">Hobbies</a>
     </div>
-  </header>
+  </nav>
 
-  <img src="assets/banner.png" alt="Banner image" class="banner">
+  <!-- 横幅图 -->
+  <div class="hero-image">
+    <img src="assets/banner.jpg" alt="Banner image" />
+  </div>
 
-  <main class="main-container">
-    <div class="main-left">
-      <img src="assets/avatar.jpg" alt="CHENG CHOW portrait" class="avatar">
-      <p><strong>PhD Student</strong><br>
-        Steve Hicks School of Social Work<br>
+  <!-- 主体区域 -->
+  <div class="container main-content">
+    <div class="left-column">
+      <img class="avatar" src="assets/avatar.jpg" alt="CHENG CHOW portrait" />
+      <div class="title-block">
+        <strong>PhD Student</strong><br/>
+        Steve Hicks School of Social Work<br/>
         The University of Texas at Austin
-      </p>
+      </div>
     </div>
-    <div class="main-right">
+
+    <div class="right-column">
       <p>
-        Cheng Chow is a PhD student in Social Work. His research lies at the intersection of immigration, health disparities, and social policy. His work seeks to advance health equity by examining how policy environments, service infrastructures, as well as social and cultural determinants shape the lived experiences of immigrants, refugees, and racialized communities.
+        Cheng Chow is a PhD student in Social Work at the University of Texas at Austin. His research focuses on 
+        <a href="https://example.com">immigration</a>, 
+        <a href="https://example.com">health disparities</a>, 
+        and social policy, especially among Asian and Asian American populations.
+        You can download his <a href="resume/chengchow_cv.pdf">CV here</a>.
       </p>
-      <p>
-        His scholarship spans three interconnected levels:<br>
-        (1) <strong>Macro</strong>: structural and institutional drivers of health and healthcare disparities among immigrant and ethnic minority populations;<br>
-        (2) <strong>Meso</strong>: development, implementation, and evaluation of community-engaged, culturally responsive models of care for underserved groups;<br>
-        (3) <strong>Micro</strong>: acculturation processes, immigrant life course trajectories, and racial/ethnic health disparities.
-      </p>
-      <p>
-        Methodologically, Cheng employs mixed methods, causal inference, and policy analysis, complemented by data science tools and critical theoretical frameworks. He has conducted research in both local and global contexts, including community-based studies in the U.S. and longitudinal and ethnographic fieldwork in Southeast Asia. His work has appeared in <em>Health Policy</em>, <em>Social Science & Medicine</em>, and the <em>Journal of Ethnic and Migration Studies</em>, and has earned honors such as the APPAM Equity & Inclusion Student Fellowship and the W. Parker Frisbie Best Publication Award.
-      </p>
-      <p>
-        He is currently a doctoral student at the 
-        <a href="https://socialwork.utexas.edu/" target="_blank">Steve Hicks School of Social Work</a>, 
-        a graduate trainee at the 
-        <a href="https://liberalarts.utexas.edu/prc/" target="_blank">Population Research Center</a>, and 
-        a graduate affiliate with the 
-        <a href="https://law.utexas.edu/humanrights/" target="_blank">Rapoport Center for Human Rights and Justice</a>. 
-        He is also completing graduate portfolio programs in 
-        <a href="https://liberalarts.utexas.edu/aas/graduate-portfolio/" target="_blank">Asian American Studies</a> and 
-        <a href="https://ethicalai.utexas.edu/admissions-to-ethical-ai-portfolio-program/" target="_blank">Ethical AI</a>.
-      </p>
-      <h3>News and Updates</h3>
+
+      <h2>News and Updates</h2>
       <ul>
-        <li>[2025.06] Paper accepted at <a href="#">Healthcare</a></li>
+        <li>[2025.06] Paper accepted at <a href="https://example.com">Healthcare</a></li>
         <li>[2025.05] Presented at APHA 2025 in Washington D.C.</li>
         <li>[2024.11] Launched new project on Asian immigrant health.</li>
       </ul>
     </div>
-  </main>
+  </div>
 
-  <footer class="footer">
-    <div class="container">
-      <p><strong>Cheng Chow</strong><br>
-      Steve Hicks School of Social Work<br>
-      The University of Texas at Austin</p>
-      <p>
-        405 W. 25th Street, Stop D3500<br>
-        Austin, Texas 78705<br>
-        <a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a>
-      </p>
-    </div>
-  </footer>
+  <!-- 自动高亮当前导航项 -->
+  <script>
+    const path = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === path || (path === '/' && href.endsWith('index.html'))) {
+        link.classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>
