@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - CHENG CHOW</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV | CHENG CHOW</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1>CHENG CHOW</h1>
-      <nav>
-        <ul class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cv.html" class="active">CV</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="hobbies.html">Hobbies</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="cv-container">
-    <p>You can also <a href="assets/CV_Cheng%20Chow_202506.pdf" download>download the original PDF version here</a>.</p>
-    <iframe src="assets/CV_Cheng%20Chow_202506.pdf" width="100%" height="800px" style="border:none;"></iframe>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p><strong>Cheng Chow</strong><br>
-      Steve Hicks School of Social Work<br>
-      The University of Texas at Austin</p>
-      <p>
-        405 W. 25th Street, Stop D3500<br>
-        Austin, Texas 78705<br>
-        <a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a>
-      </p>
+  <!-- 导航栏 -->
+  <nav class="navbar container">
+    <div class="site-title">CHENG CHOW</div>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/cv.html">CV</a>
+      <a href="/research.html">Research</a>
+      <a href="/teaching.html">Teaching</a>
+      <a href="/hobbies.html">Hobbies</a>
     </div>
-  </footer>
+  </nav>
+
+  <!-- 页面内容 -->
+  <div class="container" style="margin-top: 40px;">
+    <h2>Curriculum Vitae</h2>
+    <p>
+      You can download the PDF version of my CV here:
+      <a href="resume/chengchow_cv.pdf" download>Download CV (PDF)</a>
+    </p>
+
+    <div style="margin-top: 30px;">
+      <iframe 
+        src="resume/chengchow_cv.pdf" 
+        width="100%" 
+        height="800px" 
+        style="border: none;"
+        title="Cheng Chow CV PDF">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- 高亮当前导航 -->
+  <script>
+    const path = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === path || (path === '/' && href.endsWith('index.html'))) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
 </body>
 </html>
+
