@@ -119,6 +119,14 @@ details summary:hover {
   color: #0066cc;
 }
 
+details summary {
+  list-style: none; /* 禁用默认列表样式 */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* 隐藏浏览器默认的下拉箭头（Chrome/Safari） */
+}
+
 details[open] summary::before {
   content: "▼";
   position: absolute;
