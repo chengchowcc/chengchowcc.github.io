@@ -183,7 +183,7 @@ a:hover {
 .view-more {
   font-size: 0.9rem;
   margin-left: 10px;
-  color: rgb(0, 122, 255); /* ✅ Apple蓝 */
+  color: #045DB7;
   cursor: pointer;
 }
 
