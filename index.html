@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cheng Chow - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <!-- 顶部导航栏 -->
@@ -21,25 +22,34 @@
     </div>
   </nav>
 
-  <!-- 主体区域 -->
+  <!-- 主体容器 -->
   <main class="main-container">
-    <!-- 左侧头像与信息 -->
+    <!-- 左侧头像与链接 -->
     <aside class="sidebar">
       <div class="avatar-wrapper">
         <img src="assets/avatar.jpg" alt="Cheng Chow" class="avatar" />
       </div>
-      <div class="affiliation">
+      <div class="sidebar-info">
         <p>Steve Hicks School of Social Work</p>
         <p>The University of Texas at Austin</p>
-      </div>
-      <div class="links icons">
-        <a href="mailto:chengchow@utexas.edu" target="_blank"><span class="icon">📧</span>Email</a>
-        <a href="https://linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank"><span class="icon">🔗</span>LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank"><span class="icon">🔍</span>Google Scholar</a>
+        <ul class="icon-links">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:chengchow@utexas.edu">Email</a>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <a href="https://scholar.google.com/citations?user=YOUR-GSCHOLAR-ID" target="_blank">Google Scholar</a>
+          </li>
+        </ul>
       </div>
     </aside>
 
-    <!-- 右侧内容 -->
+    <!-- 右侧内容卡片 -->
     <section class="content">
       <div class="card">
         <h2>Bio</h2>
@@ -75,9 +85,9 @@
     </section>
   </main>
 
-  <!-- 横幅 Banner 图 -->
+  <!-- 横幅图片 -->
   <div class="banner">
-    <img src="assets/banner.png" alt="Banner image" />
+    <img src="assets/banner.png" alt="People Walking Banner" />
   </div>
 
   <!-- 页脚 -->
