@@ -26,9 +26,8 @@ a:hover {
 }
 
 .navbar-container {
-  max-width: 4000px;
-  margin: 0 auto;
-  padding: 0 40px;
+  width: 100%;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,20 +36,18 @@ a:hover {
 .site-title {
   font-weight: bold;
   font-size: 1.5rem;
-  flex-basis: 25%;
   letter-spacing: 1.5px;
-  padding-left: 150px;
+  margin-left: 60px;
 }
 
 .nav-links {
-  flex-basis: 25%;
   display: flex;
   justify-content: flex-end;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-right: 100px;
+  margin-right: 60px;
 }
 
 .nav-link {
