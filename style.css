@@ -1,4 +1,4 @@
-/* === 全局样式 === */
+/* === 全局设置 === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +9,12 @@ body {
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 a {
   color: #0066cc;
@@ -17,99 +23,93 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /* === 顶部导航栏 === */
 .navbar {
+  width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   padding: 20px 40px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.navbar .site-title {
-  font-size: 22px;
+.site-title {
+  font-size: 24px;
   font-weight: bold;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 .nav-links a {
-  margin-left: 20px;
-  color: #666;
+  margin-left: 24px;
+  color: #555;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
   transition: color 0.2s;
+  cursor: pointer;
 }
 .nav-links a.active,
 .nav-links a:hover {
   color: #000;
 }
 
-/* === 页面主体区 === */
-.main-wrapper {
+/* === 主体内容区布局 === */
+.main-content {
   display: flex;
-  margin-top: 40px;
-  padding: 0 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
-.sidebar {
-  flex: 0 0 250px;
+.left-column {
+  flex: 1 1 250px;
+  max-width: 280px;
   text-align: center;
+  padding: 0 10px;
 }
-.sidebar .avatar {
+.avatar {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ccc;
+  border-radius: 50%;
   margin-bottom: 20px;
+  border: 1px solid #ccc;
 }
-.sidebar .title-block {
+.title-block {
   font-size: 14px;
   color: #666;
-  margin-bottom: 15px;
+  margin-top: 10px;
 }
-.sidebar .external-links a {
-  display: block;
-  margin-bottom: 8px;
-  color: #0066cc;
-  font-size: 14px;
+.right-column {
+  flex: 2 1 600px;
+  max-width: calc(100% - 320px);
 }
-
-.main-content {
-  flex: 1;
-}
-.section-card {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-.section-card h2 {
+.right-column h2 {
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #222;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.right-column ul {
+  padding-left: 20px;
+  list-style: disc;
 }
 
-/* === 折叠更新样式 === */
+/* 折叠块样式美化 */
 details summary {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 18px;
+  margin-top: 20px;
   list-style: none;
+  position: relative;
+  padding-left: 20px;
+  transition: color 0.3s;
 }
 details summary::-webkit-details-marker {
   display: none;
@@ -118,18 +118,19 @@ details[open] summary::before {
   content: "▼";
   position: absolute;
   left: 0;
-  font-size: 12px;
-  top: 3px;
+  top: 1px;
+  font-size: 14px;
+  transition: transform 0.3s ease;
 }
 details:not([open]) summary::before {
   content: "▶";
   position: absolute;
   left: 0;
-  font-size: 12px;
-  top: 3px;
+  top: 1px;
+  font-size: 14px;
 }
 details ul {
-  margin: 10px 0 0 18px;
+  margin: 10px 0 20px 20px;
   padding-left: 20px;
   border-left: 2px solid #eee;
 }
@@ -137,17 +138,7 @@ details ul li {
   margin-bottom: 10px;
 }
 
-/* === 页脚 === */
-.footer {
-  background-color: #f2f2f2;
-  padding: 40px 20px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
-/* === 横幅图片在最下方 === */
+/* === 横幅图片区域（页脚上方） === */
 .banner {
   width: 100%;
   height: 250px;
@@ -155,24 +146,48 @@ details ul li {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+
+/* === 页脚样式 === */
+.footer {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+.footer a {
+  color: #666;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 /* === 响应式支持 === */
 @media (max-width: 768px) {
-  .main-wrapper {
+  .main-content {
     flex-direction: column;
-    padding: 0 20px;
   }
   .navbar {
+    text-align: center;
     flex-direction: column;
-    align-items: flex-start;
   }
   .nav-links {
+    display: block;
     margin-top: 10px;
   }
-  .sidebar {
-    text-align: center;
-    margin-bottom: 20px;
+  .nav-links a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+  .left-column,
+  .right-column {
+    max-width: 100%;
+  }
+  .right-column {
+    margin-top: 20px;
   }
 }
