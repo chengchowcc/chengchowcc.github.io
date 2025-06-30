@@ -144,9 +144,9 @@ a:hover {
 }
 
 .card p {
-  line-height: 1.8;         /* 行距，默认是 1.6，调大一点更舒适 */
+  line-height: 1.7;         /* 行距，默认是 1.6，调大一点更舒适 */
   letter-spacing: 0.3px;    /* 字符间距，默认 0，这样微调不会太松 */
-  margin-bottom: 12px;      /* 段落间距，避免段落太贴 */
+  margin-bottom: 10px;      /* 段落间距，避免段落太贴 */
 }
 
 .card p a {
