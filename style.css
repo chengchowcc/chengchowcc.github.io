@@ -15,50 +15,51 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === 导航栏更新 === */
-
+/* 顶部导航栏 */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #f8f8f8;
-  padding: 12px 0;
   border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: center; /* 让导航栏内容整体居中 */
+  padding: 15px 0;
 }
 
 .navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 120px; /* CHENG CHOW 与菜单之间的间距 */
 }
 
-/* 1. CHENG CHOW 居中显示 + 字符间距 */
 .site-title {
   font-weight: bold;
   font-size: 1.5rem;
-  letter-spacing: 2px; /* 字符间距稍微拉开 */
+  flex-basis: 25%;
+  letter-spacing: 1.5px;
 }
 
-/* 2. 菜单项目灰色、hover 黑色、active 黑色、无下划线 */
 .nav-links {
-  list-style: none;
+  flex-basis: 25%;
   display: flex;
-  gap: 30px; /* 菜单选项之间的间距稍微加大 */
+  justify-content: flex-end;
+  gap: 25px;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li a {
-  color: #888;  /* 默认灰色 */
-  text-decoration: none;
+.nav-link {
+  color: #666;
   font-weight: 500;
-  transition: color 0.2s ease;
+  text-decoration: none;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #000;  /* 黑色 hover 或激活 */
-  text-decoration: none; /* 禁用下划线 */
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
 }
 
 /* 主体内容区域 */
