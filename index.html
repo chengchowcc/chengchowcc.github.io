@@ -7,10 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- 顶部导航栏 -->
-  <nav class="navbar-full">
-    <div class="navbar container">
+  <nav class="navbar">
+    <div class="navbar-container">
       <div class="site-title">CHENG CHOW</div>
       <div class="nav-links">
         <a href="/index.html">Home</a>
@@ -22,82 +21,84 @@
     </div>
   </nav>
 
-  <!-- 主体布局 -->
-  <div class="container home-layout">
-    <!-- 左栏 -->
-    <aside class="sidebar">
-      <img class="avatar-large" src="assets/avatar.jpg" alt="CHENG CHOW portrait" />
-      <div class="sidebar-text">
-        <strong>PhD Student</strong><br/>
-        Steve Hicks School of Social Work<br/>
-        The University of Texas at Austin
-      </div>
-      <div class="sidebar-links">
-        <a href="mailto:chengchow@utexas.edu">Email</a>
-        <a href="https://scholar.google.com">Google Scholar</a>
-        <a href="https://orcid.org">ORCID</a>
-        <!-- 可添加更多链接 -->
+  <!-- 主体内容区 -->
+  <div class="main-content">
+    <!-- 左侧信息栏 -->
+    <aside class="left-column">
+      <img class="avatar" src="assets/avatar.jpg" alt="CHENG CHOW portrait" />
+      <div class="contact-info">
+        <p><strong>PhD Student</strong></p>
+        <p>Steve Hicks School of Social Work</p>
+        <p>The University of Texas at Austin</p>
+        <div class="external-links">
+          <a href="mailto:chengchow@utexas.edu">Email</a>
+          <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+          <a href="https://orcid.org" target="_blank">ORCID</a>
+        </div>
       </div>
     </aside>
 
-    <!-- 右栏 -->
-    <main class="main-panel">
-
+    <!-- 右侧内容区 -->
+    <section class="right-column">
       <!-- 个人简介卡片 -->
-      <section class="card">
+      <div class="card">
         <h2>About Me</h2>
         <p>Cheng Chow is a PhD student in Social Work. His research lies at the intersection of immigration, health disparities, and social policy...</p>
-        <p>He is currently a doctoral student at the <a href="https://socialwork.utexas.edu/" target="_blank">Steve Hicks School of Social Work</a>...</p>
-      </section>
+        <p>He is currently a doctoral student at the <a href="https://socialwork.utexas.edu/" target="_blank">Steve Hicks School of Social Work</a>, a graduate trainee at the <a href="https://liberalarts.utexas.edu/prc/" target="_blank">Population Research Center</a>...</p>
+      </div>
 
-      <!-- 新闻动态卡片 -->
-      <section class="card">
+      <!-- News & Updates 卡片 -->
+      <div class="card">
         <h2>News and Updates</h2>
         <details open>
           <summary><strong>2025 Updating</strong></summary>
           <ul>
-            <li><strong>June 2025:</strong> I am honored to receive the <a href="https://liberalarts.utexas.edu/prc/news/prc-announces-2025-w-parker-frisbie-outstanding-publication-award-winners">2025 W. Parker Frisbie Outstanding Publication Award</a>...</li>
-            <!-- 省略后续内容，可完整粘贴 -->
+            <li><strong>June 2025:</strong> Received the <a href="https://liberalarts.utexas.edu/prc/news/prc-announces-2025-w-parker-frisbie-outstanding-publication-award-winners" target="_blank">W. Parker Frisbie Award</a> for a <a href="https://doi.org/10.1016/j.healthpol.2025.105267" target="_blank">Health Policy</a> paper.</li>
+            <li><strong>June 2025:</strong> Presented at <a href="https://www.austintexas.gov/content/asian-american-quality-life-advisory-commission" target="_blank">AAQL Commission</a>, Austin.</li>
+            <li><strong>June 2025:</strong> Abstracts accepted at <a href="https://www.apha.org/events-and-meetings/annual" target="_blank">APHA 2025</a>.</li>
+            <li><strong>June 2025:</strong> Attended <a href="https://cprc.columbia.edu/content/future-families-summer-data-workshop" target="_blank">Columbia Workshop</a>.</li>
           </ul>
         </details>
         <details>
           <summary><strong>2024</strong></summary>
           <ul>
-            <li><strong>December 2024:</strong> We received a pilot research grant...</li>
-            <!-- 同上 -->
+            <li><strong>December 2024:</strong> Pilot grant from <a href="https://sites.utexas.edu/chpr/grants-programs/pilot-research-grants/" target="_blank">St. David’s CHPR</a>.</li>
+            <li><strong>November 2024:</strong> Collaboration with <a href="https://www.austintexas.gov/content/asian-american-quality-life-advisory-commission" target="_blank">AAQL Commission</a>.</li>
           </ul>
         </details>
-      </section>
+      </div>
 
-      <!-- 页面预览链接卡片 -->
-      <section class="card preview">
-        <h2>Curriculum Vitae</h2>
-        <p>A summary of Cheng's academic background, honors, and teaching experiences.</p>
+      <!-- CV 卡片预览 -->
+      <div class="card preview">
+        <h2>CV</h2>
+        <p>Detailed academic background, education, fellowships, teaching experience, and professional service.</p>
         <a href="cv.html">View more →</a>
-      </section>
+      </div>
 
-      <section class="card preview">
+      <!-- Research 卡片预览 -->
+      <div class="card preview">
         <h2>Research</h2>
-        <p>Cheng's work centers on immigrant health policy, social determinants of health, and community-based participatory research.</p>
+        <p>Research areas include immigration, racial/ethnic disparities, health policy, and digital health equity.</p>
         <a href="research.html">View more →</a>
-      </section>
+      </div>
 
-      <section class="card preview">
+      <!-- Teaching 卡片预览 -->
+      <div class="card preview">
         <h2>Teaching</h2>
-        <p>Cheng teaches on topics including health disparities, research methods, and social policy analysis.</p>
+        <p>Instructor and TA in graduate and undergraduate courses in research methods and social work practice.</p>
         <a href="teaching.html">View more →</a>
-      </section>
+      </div>
 
-      <section class="card preview">
+      <!-- Hobbies 卡片预览 -->
+      <div class="card preview">
         <h2>Hobbies</h2>
-        <p>Outside of academia, Cheng enjoys photography, hiking, and playing piano.</p>
+        <p>Outside of academia, I enjoy photography, hiking, and exploring different cultures through food and travel.</p>
         <a href="hobbies.html">View more →</a>
-      </section>
-
-    </main>
+      </div>
+    </section>
   </div>
 
-  <!-- 横幅图片放在页脚上方 -->
+  <!-- 横幅图放在最下方 -->
   <div class="banner"></div>
 
   <!-- 页脚 -->
@@ -109,18 +110,5 @@
       <p><a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a></p>
     </div>
   </footer>
-
-  <!-- 自动高亮导航 -->
-  <script>
-    const path = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href.endsWith('index.html'))) {
-        link.classList.add('active');
-      }
-    });
-  </script>
-
 </body>
 </html>
