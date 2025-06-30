@@ -1,193 +1,111 @@
-/* === 全局设置 === */
-* {
-  box-sizing: border-box;
+/* 全局样式 */
+body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #333;
-  line-height: 1.6;
-  overflow-x: hidden;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
 a {
-  color: #0066cc;
+  color: #0077cc;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
-/* === 顶部导航栏 === */
+/* 顶部导航 */
 .navbar {
-  width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 20px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 .site-title {
-  font-size: 24px;
   font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 1.4rem;
 }
-.nav-links a {
-  margin-left: 24px;
-  color: #555;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: color 0.2s;
-  cursor: pointer;
-}
-.nav-links a.active,
-.nav-links a:hover {
-  color: #000;
-}
-
-/* === 主体内容区布局 === */
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  margin: 40px auto;
-  max-width: 1200px;
-}
-.left-column {
-  flex: 1 1 250px;
-  max-width: 280px;
-  text-align: center;
-  padding: 0 10px;
-}
-.avatar {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-}
-.title-block {
-  font-size: 14px;
-  color: #666;
-  margin-top: 10px;
-}
-.right-column {
-  flex: 2 1 600px;
-  max-width: calc(100% - 320px);
-}
-.right-column h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-.right-column ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-/* 折叠块样式美化 */
-details summary {
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 20px;
+.nav-links {
   list-style: none;
-  position: relative;
-  padding-left: 20px;
-  transition: color 0.3s;
+  display: flex;
+  gap: 15px;
 }
-details summary::-webkit-details-marker {
-  display: none;
-}
-details[open] summary::before {
-  content: "▼";
-  position: absolute;
-  left: 0;
-  top: 1px;
-  font-size: 14px;
-  transition: transform 0.3s ease;
-}
-details:not([open]) summary::before {
-  content: "▶";
-  position: absolute;
-  left: 0;
-  top: 1px;
-  font-size: 14px;
-}
-details ul {
-  margin: 10px 0 20px 20px;
-  padding-left: 20px;
-  border-left: 2px solid #eee;
-}
-details ul li {
-  margin-bottom: 10px;
+.nav-links li {
+  display: inline;
 }
 
-/* === 横幅图片区域（页脚上方） === */
-.banner {
-  width: 100%;
-  height: 250px;
-  background-image: url("assets/banner.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 60px;
+/* 主体内容区域 */
+.main-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-/* === 页脚样式 === */
-.footer {
-  background-color: #f9f9f9;
-  padding: 30px 0;
-  font-size: 14px;
-  color: #666;
+/* 左侧头像与链接 */
+.sidebar {
+  width: 25%;
+  padding-right: 20px;
   text-align: center;
-  border-top: 1px solid #ddd;
-}
-.footer a {
-  color: #666;
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: underline;
 }
 
-/* === 响应式支持 === */
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
-  .navbar {
-    text-align: center;
-    flex-direction: column;
-  }
-  .nav-links {
-    display: block;
-    margin-top: 10px;
-  }
-  .nav-links a {
-    display: inline-block;
-    margin: 5px 10px;
-  }
-  .left-column,
-  .right-column {
-    max-width: 100%;
-  }
-  .right-column {
-    margin-top: 20px;
-  }
+.avatar-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar {
+  width: 100%;
+  height: 180px; /* 高于容器高度 */
+  object-fit: cover;
+  object-position: top; /* 偏上对齐头像 */
+  display: block;
+}
+
+.links a {
+  display: block;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* 右侧卡片内容 */
+.content {
+  width: 75%;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.card h2 {
+  margin-top: 0;
+}
+
+/* 横幅图片 */
+.banner img {
+  width: 100%;
+  display: block;
+  margin-top: 40px;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #555;
+  line-height: 1.5;
 }
