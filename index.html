@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHENG CHOW</title>
+  <title>Cheng Chow - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,104 +11,81 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="site-title">CHENG CHOW</div>
-      <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/cv.html">CV</a>
-        <a href="/research.html">Research</a>
-        <a href="/teaching.html">Teaching</a>
-        <a href="/hobbies.html">Hobbies</a>
-      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- 主体内容区 -->
-  <div class="main-content">
-    <!-- 左侧信息栏 -->
-    <aside class="left-column">
-      <img class="avatar" src="assets/avatar.jpg" alt="CHENG CHOW portrait" />
-      <div class="contact-info">
-        <p><strong>PhD Student</strong></p>
-        <p>Steve Hicks School of Social Work</p>
-        <p>The University of Texas at Austin</p>
-        <div class="external-links">
-          <a href="mailto:chengchow@utexas.edu">Email</a>
-          <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
-          <a href="https://orcid.org" target="_blank">ORCID</a>
-        </div>
+  <!-- 主体内容 -->
+  <main class="main-container">
+    <!-- 左侧头像与链接 -->
+    <aside class="sidebar">
+      <div class="avatar-wrapper">
+        <img src="assets/avatar.jpg" alt="Cheng Chow" class="avatar" />
+      </div>
+      <div class="links">
+        <a href="mailto:chengchow@utexas.edu">Email</a>
+        <a href="https://scholar.google.com/">Google Scholar</a>
+        <a href="resume/chengchow_cv.pdf">Resume (PDF)</a>
+        <a href="https://github.com/chengchowcc">GitHub</a>
       </div>
     </aside>
 
-    <!-- 右侧内容区 -->
-    <section class="right-column">
-      <!-- 个人简介卡片 -->
+    <!-- 右侧卡片内容 -->
+    <section class="content">
       <div class="card">
-        <h2>About Me</h2>
-        <p>Cheng Chow is a PhD student in Social Work. His research lies at the intersection of immigration, health disparities, and social policy...</p>
-        <p>He is currently a doctoral student at the <a href="https://socialwork.utexas.edu/" target="_blank">Steve Hicks School of Social Work</a>, a graduate trainee at the <a href="https://liberalarts.utexas.edu/prc/" target="_blank">Population Research Center</a>...</p>
+        <h2>Bio</h2>
+        <p>Write your academic background and research interests here.</p>
       </div>
-
-      <!-- News & Updates 卡片 -->
       <div class="card">
-        <h2>News and Updates</h2>
-        <details open>
-          <summary><strong>2025 Updating</strong></summary>
-          <ul>
-            <li><strong>June 2025:</strong> Received the <a href="https://liberalarts.utexas.edu/prc/news/prc-announces-2025-w-parker-frisbie-outstanding-publication-award-winners" target="_blank">W. Parker Frisbie Award</a> for a <a href="https://doi.org/10.1016/j.healthpol.2025.105267" target="_blank">Health Policy</a> paper.</li>
-            <li><strong>June 2025:</strong> Presented at <a href="https://www.austintexas.gov/content/asian-american-quality-life-advisory-commission" target="_blank">AAQL Commission</a>, Austin.</li>
-            <li><strong>June 2025:</strong> Abstracts accepted at <a href="https://www.apha.org/events-and-meetings/annual" target="_blank">APHA 2025</a>.</li>
-            <li><strong>June 2025:</strong> Attended <a href="https://cprc.columbia.edu/content/future-families-summer-data-workshop" target="_blank">Columbia Workshop</a>.</li>
-          </ul>
-        </details>
-        <details>
-          <summary><strong>2024</strong></summary>
-          <ul>
-            <li><strong>December 2024:</strong> Pilot grant from <a href="https://sites.utexas.edu/chpr/grants-programs/pilot-research-grants/" target="_blank">St. David’s CHPR</a>.</li>
-            <li><strong>November 2024:</strong> Collaboration with <a href="https://www.austintexas.gov/content/asian-american-quality-life-advisory-commission" target="_blank">AAQL Commission</a>.</li>
-          </ul>
-        </details>
+        <h2>News & Updates</h2>
+        <ul>
+          <li>[2025-06-30] Website is under development.</li>
+          <li>[2025-06-01] Paper accepted at XYZ Conference.</li>
+        </ul>
       </div>
-
-      <!-- CV 卡片预览 -->
-      <div class="card preview">
+      <div class="card">
         <h2>CV</h2>
-        <p>Detailed academic background, education, fellowships, teaching experience, and professional service.</p>
+        <p>Summary of academic and professional experiences...</p>
         <a href="cv.html">View more →</a>
       </div>
-
-      <!-- Research 卡片预览 -->
-      <div class="card preview">
+      <div class="card">
         <h2>Research</h2>
-        <p>Research areas include immigration, racial/ethnic disparities, health policy, and digital health equity.</p>
+        <p>My work focuses on urban mobility, semantic communication...</p>
         <a href="research.html">View more →</a>
       </div>
-
-      <!-- Teaching 卡片预览 -->
-      <div class="card preview">
+      <div class="card">
         <h2>Teaching</h2>
-        <p>Instructor and TA in graduate and undergraduate courses in research methods and social work practice.</p>
+        <p>Teaching experiences and philosophy...</p>
         <a href="teaching.html">View more →</a>
       </div>
-
-      <!-- Hobbies 卡片预览 -->
-      <div class="card preview">
+      <div class="card">
         <h2>Hobbies</h2>
-        <p>Outside of academia, I enjoy photography, hiking, and exploring different cultures through food and travel.</p>
+        <p>I enjoy photography, travel, and music...</p>
         <a href="hobbies.html">View more →</a>
       </div>
     </section>
-  </div>
+  </main>
 
-  <!-- 横幅图放在最下方 -->
-  <div class="banner"></div>
+  <!-- 横幅图片 -->
+  <div class="banner">
+    <img src="assets/banner.png" alt="People Walking Banner" />
+  </div>
 
   <!-- 页脚 -->
   <footer class="footer">
-    <div class="container">
-      <p>Cheng Chow<br>
-      Steve Hicks School of Social Work<br>
-      The University of Texas at Austin</p>
-      <p><a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a></p>
-    </div>
+    <p>
+      Cheng Chow<br />
+      Steve Hicks School of Social Work<br />
+      The University of Texas at Austin<br />
+      405 W. 25th Street, Stop D3500, Austin, Texas 78705<br />
+      chengchow@utexas.edu
+    </p>
   </footer>
 </body>
 </html>
