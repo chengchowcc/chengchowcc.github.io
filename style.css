@@ -29,14 +29,14 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px; /* CHENG CHOW 与菜单之间的间距 */
+  gap: 120px; /* CHENG CHOW 与菜单之间的间距 */
 }
 
 /* 1. CHENG CHOW 居中显示 + 字符间距 */
 .site-title {
   font-weight: bold;
   font-size: 1.5rem;
-  letter-spacing: 1px; /* 字符间距稍微拉开 */
+  letter-spacing: 2px; /* 字符间距稍微拉开 */
 }
 
 /* 2. 菜单项目灰色、hover 黑色、active 黑色、无下划线 */
