@@ -15,28 +15,50 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 顶部导航 */
+/* === 导航栏更新 === */
+
 .navbar {
   background-color: #f8f8f8;
-  padding: 10px 20px;
+  padding: 12px 0;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center; /* 让导航栏内容整体居中 */
 }
+
 .navbar-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  gap: 60px; /* CHENG CHOW 与菜单之间的间距 */
 }
+
+/* 1. CHENG CHOW 居中显示 + 字符间距 */
 .site-title {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px; /* 字符间距稍微拉开 */
 }
+
+/* 2. 菜单项目灰色、hover 黑色、active 黑色、无下划线 */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 30px; /* 菜单选项之间的间距稍微加大 */
+  margin: 0;
+  padding: 0;
 }
-.nav-links li {
-  display: inline;
+
+.nav-links li a {
+  color: #888;  /* 默认灰色 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #000;  /* 黑色 hover 或激活 */
+  text-decoration: none; /* 禁用下划线 */
 }
 
 /* 主体内容区域 */
