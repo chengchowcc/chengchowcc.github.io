@@ -160,8 +160,8 @@ a:hover {
   width: 100%;
   background: linear-gradient(
     to right,
-    rgba(52, 200, 90, 1),
-    rgba(52, 200, 90, 0)
+    rgba(183, 4, 4, 1),
+    rgba(183, 4, 4, 0)
   );
 }
 
