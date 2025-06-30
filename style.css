@@ -26,7 +26,7 @@ a:hover {
 }
 
 .navbar-container {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -72,14 +72,14 @@ a:hover {
 
 /* 左侧头像与信息 */
 .sidebar {
-  width: 25%;
+  width: 35%;
   padding-right: 20px;
   text-align: center;
 }
 
 .avatar-wrapper {
-  width: 160px;
-  height: 160px;
+  width: 350px;
+  height: 350px;
   margin: 0 auto 10px auto;
   border-radius: 50%;
   overflow: hidden;
