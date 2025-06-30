@@ -26,7 +26,7 @@ a:hover {
 }
 
 .navbar-container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -73,7 +73,7 @@ a:hover {
 
 /* 左侧头像与信息 */
 .sidebar {
-  width: 35%;
+  width: 25%;
   padding-right: 20px;
   display: flex;
   flex-direction: column;
