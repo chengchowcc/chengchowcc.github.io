@@ -149,6 +149,15 @@ a:hover {
   margin-bottom: 12px;      /* 段落间距，避免段落太贴 */
 }
 
+.card p a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.card p a:hover {
+  text-decoration: underline;
+}
+
 /* 横幅 */
 .banner img {
   width: 100%;
