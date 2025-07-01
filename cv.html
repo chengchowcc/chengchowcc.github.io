@@ -44,11 +44,11 @@
 
   <!-- 当前页导航高亮 -->
   <script>
-    const path = window.location.pathname;
+    const path = window.location.pathname.split("/").pop(); // 获取当前文件名，如 'cv.html'
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href.endsWith('cv.html'))) {
+      if (href === path) {
         link.classList.add('active');
       }
     });
