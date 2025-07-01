@@ -25,17 +25,22 @@ a:hover {
 
 /* === 顶部导航栏 === */
 .navbar {
+  width: 100%; 
   background-color: #fff;
   border-bottom: 1px solid #eee;
   padding: 30px 0 20px 0;
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.navbar-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .site-title {
   font-size: 26px;
   font-weight: bold;
@@ -61,7 +66,7 @@ a:hover {
   width: 100%;
   height: 250px;
   background-image: url("assets/banner.png");
-  background-position: center center;
+  background-position: center top; 
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -102,7 +107,11 @@ a:hover {
   padding-left: 20px;
   list-style: disc;
 }
-
+.right-column p {
+  letter-spacing: 0.3px;     /* 字符间距稍微增大 */
+  line-height: 1.8;          /* 行间距略大 */
+  margin-bottom: 18px;       /* 段落之间的距离 */
+}
 /* === 折叠块样式 === */
 details summary {
   cursor: pointer;
