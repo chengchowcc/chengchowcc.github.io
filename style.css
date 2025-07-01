@@ -95,6 +95,24 @@ a:hover {
   font-size: 14px;
   color: #666;
 }
+.sidebar-link {
+  display: inline-block;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  padding-left: 4px;
+}
+
+.sidebar-link:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 10px;
+  line-height: 1.8;
+}
 .right-column {
   flex: 2 1 600px;
 }
