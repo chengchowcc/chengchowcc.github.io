@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CV | CHENG CHOW</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- 导航栏 -->
-  <nav class="navbar container">
-    <div class="site-title">CHENG CHOW</div>
-    <div class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/cv.html">CV</a>
-      <a href="/research.html">Research</a>
-      <a href="/teaching.html">Teaching</a>
-      <a href="/hobbies.html">Hobbies</a>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="site-title">CHENG CHOW</div>
+      <div class="spacer"></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="cv.html" class="nav-link">CV</a></li>
+        <li><a href="research.html" class="nav-link">Research</a></li>
+        <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+      </ul>
     </div>
   </nav>
 
   <!-- 页面内容 -->
-  <div class="container" style="margin-top: 40px;">
+  <div class="container" style="max-width: 900px; margin: 60px auto 40px;">
     <h2>Curriculum Vitae</h2>
     <p>
       You can download the PDF version of my CV here:
@@ -39,13 +43,13 @@
     </div>
   </div>
 
-  <!-- 高亮当前导航 -->
+  <!-- 当前页导航高亮 -->
   <script>
     const path = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      if (href === path || path.endsWith(href)) {
+      if (path.endsWith(href)) {
         link.classList.add('active');
       }
     });
@@ -53,14 +57,13 @@
 
   <!-- 页脚 -->
   <footer class="footer">
-    <div class="container">
-      <p>Cheng Chow<br>
+    <p>
+      Cheng Chow<br>
       Steve Hicks School of Social Work<br>
-      The University of Texas at Austin</p>
-      <p><a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a></p>
-    </div>
+      The University of Texas at Austin<br>
+      chengchow@utexas.edu
+    </p>
   </footer>
 
 </body>
 </html>
-
