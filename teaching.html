@@ -9,27 +9,26 @@
 </head>
 <body>
   <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="navbar-container">
+  <nav class="navbar container">
+    <div class="container navbar-inner">
       <div class="site-title">CHENG CHOW</div>
-      <div class="spacer"></div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="cv.html" class="nav-link">CV</a></li>
-        <li><a href="research.html" class="nav-link">Research</a></li>
-        <li><a href="teaching.html" class="nav-link">Teaching</a></li>
-        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
-      </ul>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="hobbies.html">Hobbies</a>
+      </div>
     </div>
   </nav>
 
   <!-- 页面内容 -->
   <div class="container" style="max-width: 900px; margin: 60px auto 40px;">
-    <h2>Teaching</h2>
+    <h2 class="label-chio">Teaching</h2>
 
     <!-- Pedagogy -->
-    <section class="teaching-card">
-      <div class="label-chio">Pedagogy</div>
+    <section class="card">
+      <h3 class="label-chio">Pedagogy</h3>
       <p>My approach to teaching is grounded in social justice, cultural humility, and critical reflection. As someone whose academic journey has traversed globally, I bring a transnational and interdisciplinary perspective into the classroom, shaped by my lived experience as a first-generation college student, a member of the LGBTQ community, and an Asian immigrant.</p>
       <p>I view teaching as a collaborative and emancipatory practice, one that equips students with the tools to interrogate systems of oppression and engage in transformative social work. My pedagogy is anchored in three core commitments:</p>
       <ul>
@@ -40,27 +39,37 @@
     </section>
 
     <!-- Courses -->
-    <section class="teaching-card">
-      <div class="label-chio">Courses</div>
-      <ul class="course-list">
-        <li><img src="assets/UT.png" alt="UT Austin logo" class="school-logo" /> <strong>The University of Texas at Austin</strong><br>
+    <section class="card">
+      <h3 class="label-chio">Courses</h3>
+      <div class="course-block">
+        <img src="assets/UT.png" alt="UT Austin logo" class="school-logo-block" />
+        <div class="course-text">
+          <strong>The University of Texas at Austin</strong><br>
           SW 382 Social Policy Analysis and Social Problems<br>
           SW 385 Social Work Research Methods
-        </li>
-        <li><img src="assets/HKU.png" alt="HKU logo" class="school-logo" /> <strong>The University of Hong Kong (HKU)</strong><br>
+        </div>
+      </div>
+      <div class="course-block">
+        <img src="assets/HKU.png" alt="HKU logo" class="school-logo-block" />
+        <div class="course-text">
+          <strong>The University of Hong Kong (HKU)</strong><br>
           SOWK 6002 Social Policy and Social Administration<br>
           SOWK 1015 Introduction to Social Work and Social Administration
-        </li>
-        <li><img src="assets/CUHK.png" alt="CUHK logo" class="school-logo" /> <strong>The Chinese University of Hong Kong (CUHK)</strong><br>
+        </div>
+      </div>
+      <div class="course-block">
+        <img src="assets/CUHK.png" alt="CUHK logo" class="school-logo-block" />
+        <div class="course-text">
+          <strong>The Chinese University of Hong Kong (CUHK)</strong><br>
           UGFH 1000 In Dialogue with Humanity<br>
           GESH 1010 Orientation and Outreach
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Quotes -->
-    <section class="teaching-card">
-      <div class="label-chio">Quotes from Students</div>
+    <section class="card">
+      <h3 class="label-chio">Quotes from Students</h3>
       <blockquote>“Cheng checked in with me to ask if I needed support with anything when I was falling a bit behind. I really appreciated this and encouraged my learning.”</blockquote>
       <blockquote>“Your lecture on immigration policy especially stood out to me because it was informative, thoughtful, and so engaging. I learned so much from it and could really see your passion and expertise come through.”</blockquote>
     </section>
