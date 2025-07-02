@@ -2,99 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Teaching | CHENG CHOW</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <!-- 导航栏 -->
-  <nav class="navbar container">
+  <nav class="navbar">
     <div class="container navbar-inner">
       <div class="site-title">CHENG CHOW</div>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="cv.html">CV</a>
         <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
+        <a href="teaching.html" class="active">Teaching</a>
         <a href="hobbies.html">Hobbies</a>
       </div>
     </div>
   </nav>
 
-  <!-- 页面内容 -->
-  <div class="container" style="max-width: 900px; margin: 60px auto 40px;">
-    <h2 class="label-chio">Teaching</h2>
+  <!-- 主体内容 -->
+  <div class="container" style="max-width: 1000px; margin: 60px auto;">
+    <h2>Teaching</h2>
 
-    <!-- Pedagogy -->
-    <section class="card">
-      <h3 class="label-chio">Pedagogy</h3>
-      <p class="text-block">My approach to teaching is grounded in social justice, cultural humility, and critical reflection. As someone whose academic journey has traversed globally, I bring a transnational and interdisciplinary perspective into the classroom, shaped by my lived experience as a first-generation college student, a member of the LGBTQ community, and an Asian immigrant.</p>
-      <p class="text-block">I view teaching as a collaborative and emancipatory practice, one that equips students with the tools to interrogate systems of oppression and engage in transformative social work. My pedagogy is anchored in three core commitments:</p>
-      <ul class="text-block">
+    <!-- Pedagogy Section -->
+    <section class="research-section">
+      <div class="label-chip">PEDAGOGY</div>
+      <p>
+        My approach to teaching is grounded in social justice, cultural humility, and critical reflection. As someone whose academic journey has traversed globally, I bring a transnational and interdisciplinary perspective into the classroom, shaped by my lived experience as a first-generation college student, a member of the LGBTQ community, and an Asian immigrant.
+      </p>
+      <p>
+        I view teaching as a collaborative and emancipatory practice, one that equips students with the tools to interrogate systems of oppression and engage in transformative social work. My pedagogy is anchored in three core commitments:
+      </p>
+      <ul style="line-height: 1.85; font-size: 15.5px; margin-bottom: 20px;">
         <li><strong>Contextualized and experiential learning:</strong> I create opportunities for students to engage with real-world issues through case-based instruction, community narratives, policy simulations, and participatory activities. Drawing from my research on migration, policy, and health, I encourage students to connect theory with practice across global and local contexts.</li>
         <li><strong>Accessibility and inclusive dialogue:</strong> I strive to cultivate a learning space where students of all backgrounds feel heard, supported, and empowered. I employ flexible teaching formats, multi-modal assignments, and anonymous feedback to accommodate diverse learning needs. I also share my positionality with students to foster mutual trust and critical awareness of power and privilege.</li>
         <li><strong>Critical and interdisciplinary integration:</strong> I integrate perspectives from public health, policy studies, migration research, and data science to expand how students understand structural inequalities. Whether teaching research methods or social welfare, I introduce students to both quantitative rigor and critical frameworks, emphasizing questions of representation, ethics, and systemic impact.</li>
       </ul>
     </section>
 
-    <!-- Courses -->
-    <section class="card">
-      <h3 class="label-chio">Courses</h3>
-      <div class="course-block">
-        <img src="assets/UT.png" alt="UT Austin logo" class="school-logo-block" />
-        <div class="course-text">
-          <strong>The University of Texas at Austin</strong><br>
-          SW 382 Social Policy Analysis and Social Problems<br>
+    <!-- Courses Section -->
+    <section class="research-section">
+      <div class="label-chip">COURSES</div>
+
+      <div class="publication-item" style="display: flex; align-items: flex-start; gap: 16px;">
+        <img src="assets/UT.png" alt="UT Austin" style="height: 60px;">
+        <div>
+          <strong>The University of Texas at Austin</strong><br/>
+          SW 382 Social Policy Analysis and Social Problems<br/>
           SW 385 Social Work Research Methods
         </div>
       </div>
-      <div class="course-block">
-        <img src="assets/HKU.png" alt="HKU logo" class="school-logo-block" />
-        <div class="course-text">
-          <strong>The University of Hong Kong (HKU)</strong><br>
-          SOWK 6002 Social Policy and Social Administration<br>
+
+      <div class="publication-item" style="display: flex; align-items: flex-start; gap: 16px;">
+        <img src="assets/HKU.png" alt="HKU" style="height: 60px;">
+        <div>
+          <strong>The University of Hong Kong (HKU)</strong><br/>
+          SOWK 6002 Social Policy and Social Administration<br/>
           SOWK 1015 Introduction to Social Work and Social Administration
         </div>
       </div>
-      <div class="course-block">
-        <img src="assets/CUHK.png" alt="CUHK logo" class="school-logo-block" />
-        <div class="course-text">
-          <strong>The Chinese University of Hong Kong (CUHK)</strong><br>
-          UGFH 1000 In Dialogue with Humanity<br>
+
+      <div class="publication-item" style="display: flex; align-items: flex-start; gap: 16px;">
+        <img src="assets/CUHK.png" alt="CUHK" style="height: 60px;">
+        <div>
+          <strong>The Chinese University of Hong Kong (CUHK)</strong><br/>
+          UGFH 1000 In Dialogue with Humanity<br/>
           GESH 1010 Orientation and Outreach
         </div>
       </div>
     </section>
 
-    <!-- Quotes -->
-    <section class="card">
-      <h3 class="label-chio">Quotes from Students</h3>
-      <blockquote class="text-block">“Cheng checked in with me to ask if I needed support with anything when I was falling a bit behind. I really appreciated this and encouraged my learning.”</blockquote>
-      <blockquote class="text-block">“Your lecture on immigration policy especially stood out to me because it was informative, thoughtful, and so engaging. I learned so much from it and could really see your passion and expertise come through.”</blockquote>
+    <!-- Student Quotes Section -->
+    <section class="research-section">
+      <div class="label-chip">QUOTES FROM STUDENTS</div>
+      <div class="publication-item">“Cheng checked in with me to ask if I needed support with anything when I was falling a bit behind. I really appreciated this and encouraged my learning.”</div>
+      <div class="publication-item">“Your lecture on immigration policy especially stood out to me because it was informative, thoughtful, and so engaging. I learned so much from it and could really see your passion and expertise come through.”</div>
     </section>
   </div>
 
-  <!-- 当前页导航高亮 -->
-  <script>
-    const path = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || path.endsWith(href)) {
-        link.classList.add('active');
-      }
-    });
-  </script>
-
   <!-- 页脚 -->
   <footer class="footer">
-    <p>
-      Cheng Chow<br>
+    <div class="container">
+      <p>Cheng Chow<br>
       Steve Hicks School of Social Work<br>
-      The University of Texas at Austin<br>
-      <a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a>
-    </p>
+      The University of Texas at Austin</p>
+      <p><a href="mailto:chengchow@utexas.edu">chengchow@utexas.edu</a></p>
+    </div>
   </footer>
 </body>
 </html>
+
