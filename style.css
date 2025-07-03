@@ -198,6 +198,41 @@ details ul li {
   margin-bottom: 10px;
 }
 
+.hobby-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.hobby-card .label-chip {
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.hobby-card p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.hobby-card .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hobby-card .gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  width: 260px;
+}
+
 /* === 页脚样式 === */
 .footer {
   background-color: #f9f9f9;
