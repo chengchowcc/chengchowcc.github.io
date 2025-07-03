@@ -233,6 +233,25 @@ details ul li {
   width: 260px;
 }
 
+.gallery figure {
+  margin: 0;
+  text-align: center;
+  width: 260px;
+}
+
+.gallery figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.gallery figure figcaption {
+  font-size: 13.5px;
+  color: #666;
+  margin-top: 8px;
+}
+
 /* === 页脚样式 === */
 .footer {
   background-color: #f9f9f9;
