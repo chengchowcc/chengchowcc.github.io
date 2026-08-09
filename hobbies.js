@@ -72,11 +72,16 @@
     const firstButton = gallery.querySelector("[data-gallery-first]");
     const counter = gallery.querySelector("[data-gallery-counter]");
     const caption = gallery.querySelector("[data-gallery-caption]");
+    const captionText = gallery.querySelector("[data-gallery-caption-text]") || caption;
+    const mapLink = gallery.querySelector("[data-gallery-map-link]");
 
     if (!viewport || slides.length === 0) return;
 
     let currentIndex = 0;
     let scrollFrame = null;
+    let scrollSyncLocked = false;
+    let scrollSyncTimer = null;
+    let resizeTimer = null;
 
     const nearestSlideIndex = () => {
       const viewportCenter = viewport.scrollLeft + (viewport.clientWidth / 2);
@@ -103,7 +108,20 @@
       nextButton.disabled = currentIndex === slides.length - 1;
       firstButton.disabled = currentIndex === 0;
       counter.textContent = `${currentIndex + 1} / ${slides.length}`;
-      caption.textContent = activeSlide.dataset.caption || "";
+      const activeCaption = activeSlide.dataset.caption || "";
+      if (captionText) captionText.textContent = activeCaption;
+
+      if (mapLink) {
+        const mapUrl = activeSlide.dataset.mapUrl || "";
+        mapLink.hidden = mapUrl === "";
+        if (mapUrl) {
+          mapLink.href = mapUrl;
+          mapLink.setAttribute("aria-label", `View ${activeCaption} on Google Maps`);
+        } else {
+          mapLink.removeAttribute("href");
+          mapLink.removeAttribute("aria-label");
+        }
+      }
 
       thumbnails.forEach((thumbnail, thumbnailIndex) => {
         if (thumbnailIndex === currentIndex) {
@@ -123,11 +141,31 @@
       }
     };
 
+    const unlockScrollSync = () => {
+      scrollSyncLocked = false;
+      if (scrollSyncTimer !== null) {
+        window.clearTimeout(scrollSyncTimer);
+        scrollSyncTimer = null;
+      }
+    };
+
+    const lockScrollSync = (duration) => {
+      unlockScrollSync();
+      scrollSyncLocked = true;
+      scrollSyncTimer = window.setTimeout(() => {
+        scrollSyncLocked = false;
+        scrollSyncTimer = null;
+        const nearestIndex = nearestSlideIndex();
+        if (nearestIndex !== currentIndex) syncInterface(nearestIndex);
+      }, duration);
+    };
+
     const goToSlide = (index, behavior = "smooth") => {
       const nextIndex = clamp(index, 0, slides.length - 1);
       const slide = slides[nextIndex];
       const left = slide.offsetLeft - ((viewport.clientWidth - slide.offsetWidth) / 2);
 
+      lockScrollSync(behavior === "smooth" && !reduceMotion.matches ? 450 : 120);
       viewport.scrollTo({
         left,
         behavior: reduceMotion.matches ? "auto" : behavior
@@ -161,6 +199,7 @@
     });
 
     viewport.addEventListener("scroll", () => {
+      if (scrollSyncLocked) return;
       if (scrollFrame !== null) return;
       scrollFrame = window.requestAnimationFrame(() => {
         scrollFrame = null;
@@ -169,13 +208,21 @@
       });
     }, { passive: true });
 
+    viewport.addEventListener("pointerdown", unlockScrollSync, { passive: true });
+    viewport.addEventListener("wheel", unlockScrollSync, { passive: true });
+
     enableMouseDrag(viewport, () => goToSlide(nearestSlideIndex()));
     if (thumbnailRail) enableMouseDrag(thumbnailRail);
 
-    if ("ResizeObserver" in window) {
-      const resizeObserver = new ResizeObserver(() => goToSlide(currentIndex, "auto"));
-      resizeObserver.observe(viewport);
-    }
+    window.addEventListener("resize", () => {
+      const indexToKeep = currentIndex;
+      lockScrollSync(260);
+      if (resizeTimer !== null) window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        resizeTimer = null;
+        goToSlide(indexToKeep, "auto");
+      }, 60);
+    });
 
     syncInterface(0);
   });

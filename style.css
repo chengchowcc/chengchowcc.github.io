@@ -434,10 +434,41 @@ details ul li {
   text-align: center;
 }
 
+.gallery-caption-text {
+  margin: 0;
+}
+
+.gallery-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+  color: #bf5700;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.gallery-map-link:hover {
+  text-decoration: underline;
+}
+
+.gallery-map-link[hidden] {
+  display: none;
+}
+
+.gallery-map-icon {
+  flex: 0 0 auto;
+  width: 1em;
+  height: 1em;
+}
+
 .gallery-thumbnail:focus-visible,
 .gallery-first:focus-visible,
 .gallery-nav:focus-visible,
-.gallery-viewport:focus-visible {
+.gallery-viewport:focus-visible,
+.gallery-map-link:focus-visible {
   outline: 3px solid rgba(191, 87, 0, 0.42);
   outline-offset: 3px;
 }
