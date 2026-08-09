@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hobbies | CHENG CHOW</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="style.css" />
+  <script src="hobbies.js" defer></script>
 </head>
 <body>
   <!-- 导航栏 -->
@@ -21,79 +25,145 @@
     </div>
   </nav>
 
-  <!-- 主体内容 -->
-  <div class="container" style="max-width: 1000px; margin: 60px auto;">
+  <main class="container hobbies-page">
     <h2>Hobbies</h2>
 
-    <!-- Traveling Card -->
-    <div class="hobby-card">
-      <div class="label-chip">TRAVELING</div>
-      <p>
+    <section class="hobby-card" aria-labelledby="traveling-title">
+      <h3 class="label-chip" id="traveling-title">TRAVELING</h3>
+      <p class="hobby-intro">
         I enjoy traveling, hiking, and kayaking, activities that connect me with both nature and people. My global journeys have become more than just personal adventures; they serve as immersive lessons in diversity, respect, and resilience. Each destination offers a new perspective, reminding me of the richness of human experience and the importance of empathy across cultures.
       </p>
-      <div class="gallery">
-        <figure>
-          <img src="assets/Lyon, France.jpg" alt="Lyon, France" />
-          <figcaption>Lyon, France</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/White Pocket, Arizona, USA.jpg" alt="White Pocket, Arizona" />
-          <figcaption>White Pocket, Arizona, USA</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Hakone, Japan.jpg" alt="Hakone, Japan" />
-          <figcaption>Hakone, Japan</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Holyrood Park, Edinburgh, UK.jpg" alt="Edinburgh" />
-          <figcaption>Holyrood Park, Edinburgh, UK</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Chefchaouene, Morocco.jpg" alt="Morocco" />
-          <figcaption>Chefchaouene, Morocco</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Humantay Lake, Peru.jpg" alt="Peru" />
-          <figcaption>Humantay Lake, Peru</figcaption>
-        </figure>
-      </div>
-    </div>
 
-    <!-- Tommy Card -->
-    <div class="hobby-card">
-      <div class="label-chip">TOMMY</div>
-      <p>
+      <div class="hobby-gallery hobby-gallery--landscape" data-gallery aria-label="Traveling photo gallery">
+        <div class="gallery-overview">
+          <div class="gallery-thumbnails" data-gallery-thumbnails aria-label="Traveling photo thumbnails">
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="0" aria-label="Show Lyon, France" aria-current="true">
+              <img src="assets/Lyon, France.jpg" alt="" draggable="false" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="1" aria-label="Show White Pocket, Arizona, USA">
+              <img src="assets/White Pocket, Arizona, USA.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="2" aria-label="Show Hakone, Japan">
+              <img src="assets/Hakone, Japan.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="3" aria-label="Show Holyrood Park, Edinburgh, UK">
+              <img src="assets/Holyrood Park, Edinburgh, UK.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="4" aria-label="Show Chefchaouene, Morocco">
+              <img src="assets/Chefchaouene, Morocco.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="5" aria-label="Show Humantay Lake, Peru">
+              <img src="assets/Humantay Lake, Peru.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+          </div>
+          <div class="gallery-toolbar">
+            <button class="gallery-first" type="button" data-gallery-first disabled>First</button>
+            <span class="gallery-counter" data-gallery-counter aria-live="polite">1 / 6</span>
+          </div>
+        </div>
+
+        <div class="gallery-stage">
+          <button class="gallery-nav gallery-nav--previous" type="button" data-gallery-previous aria-label="Previous traveling photo" disabled>
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="gallery-viewport" data-gallery-viewport tabindex="0" aria-label="Traveling photos. Drag horizontally or use the arrow keys." aria-describedby="traveling-caption">
+            <div class="gallery-track">
+              <figure class="gallery-slide" data-gallery-slide data-caption="Lyon, France">
+                <img src="assets/Lyon, France.jpg" alt="Lyon, France" draggable="false" decoding="async" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="White Pocket, Arizona, USA">
+                <img src="assets/White Pocket, Arizona, USA.jpg" alt="White Pocket, Arizona, USA" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="Hakone, Japan">
+                <img src="assets/Hakone, Japan.jpg" alt="Hakone, Japan" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="Holyrood Park, Edinburgh, UK">
+                <img src="assets/Holyrood Park, Edinburgh, UK.jpg" alt="Holyrood Park, Edinburgh, UK" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="Chefchaouene, Morocco">
+                <img src="assets/Chefchaouene, Morocco.jpg" alt="Chefchaouene, Morocco" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="Humantay Lake, Peru">
+                <img src="assets/Humantay Lake, Peru.jpg" alt="Humantay Lake, Peru" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+          <button class="gallery-nav gallery-nav--next" type="button" data-gallery-next aria-label="Next traveling photo">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+        <p class="gallery-caption" id="traveling-caption" data-gallery-caption aria-live="polite">Lyon, France</p>
+      </div>
+    </section>
+
+    <section class="hobby-card" aria-labelledby="tommy-title">
+      <h3 class="label-chip" id="tommy-title">TOMMY</h3>
+      <p class="hobby-intro">
         Tommy, my cat, came into our lives during the height of the COVID-19 pandemic. What began as a spontaneous adoption quickly turned into an unexpected source of comfort and emotional support, not just for me, but for my entire family. His playful energy, curious nature, and calming presence helped us get through a time of uncertainty and isolation. Tommy brings daily joy and reminds me to slow down, stay grounded, and appreciate the small, meaningful moments.
       </p>
-      <div class="gallery">
-        <figure>
-          <img src="assets/Tommy1.jpg" alt="Tommy 2020" />
-          <figcaption>2020</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Tommy2.jpg" alt="Tommy 2021" />
-          <figcaption>2021</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Tommy3.jpg" alt="Tommy 2022" />
-          <figcaption>2022</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Tommy4.jpg" alt="Tommy 2023" />
-          <figcaption>2023</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Tommy5.jpg" alt="Tommy 2024" />
-          <figcaption>2024</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/Tommy6.jpg" alt="Tommy 2025" />
-          <figcaption>2025</figcaption>
-        </figure>
+
+      <div class="hobby-gallery hobby-gallery--portrait" data-gallery aria-label="Tommy photo gallery">
+        <div class="gallery-overview">
+          <div class="gallery-thumbnails" data-gallery-thumbnails aria-label="Tommy photo thumbnails">
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="0" aria-label="Show Tommy in 2020" aria-current="true">
+              <img src="assets/Tommy1.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="1" aria-label="Show Tommy in 2021">
+              <img src="assets/Tommy2.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="2" aria-label="Show Tommy in 2022">
+              <img src="assets/Tommy3.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="3" aria-label="Show Tommy in 2023">
+              <img src="assets/Tommy4.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="4" aria-label="Show Tommy in 2024">
+              <img src="assets/Tommy5.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+            <button class="gallery-thumbnail" type="button" data-gallery-thumb data-index="5" aria-label="Show Tommy in 2025">
+              <img src="assets/Tommy6.jpg" alt="" draggable="false" loading="lazy" />
+            </button>
+          </div>
+          <div class="gallery-toolbar">
+            <button class="gallery-first" type="button" data-gallery-first disabled>First</button>
+            <span class="gallery-counter" data-gallery-counter aria-live="polite">1 / 6</span>
+          </div>
+        </div>
+
+        <div class="gallery-stage">
+          <button class="gallery-nav gallery-nav--previous" type="button" data-gallery-previous aria-label="Previous Tommy photo" disabled>
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="gallery-viewport" data-gallery-viewport tabindex="0" aria-label="Tommy photos. Drag horizontally or use the arrow keys." aria-describedby="tommy-caption">
+            <div class="gallery-track">
+              <figure class="gallery-slide" data-gallery-slide data-caption="2020">
+                <img src="assets/Tommy1.jpg" alt="Tommy in 2020" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="2021">
+                <img src="assets/Tommy2.jpg" alt="Tommy in 2021" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="2022">
+                <img src="assets/Tommy3.jpg" alt="Tommy in 2022" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="2023">
+                <img src="assets/Tommy4.jpg" alt="Tommy in 2023" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="2024">
+                <img src="assets/Tommy5.jpg" alt="Tommy in 2024" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+              <figure class="gallery-slide" data-gallery-slide data-caption="2025">
+                <img src="assets/Tommy6.jpg" alt="Tommy in 2025" draggable="false" decoding="async" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+          <button class="gallery-nav gallery-nav--next" type="button" data-gallery-next aria-label="Next Tommy photo">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+        <p class="gallery-caption" id="tommy-caption" data-gallery-caption aria-live="polite">2020</p>
       </div>
-    </div>
-  </div>
-  
+    </section>
+  </main>
 
   <!-- 页脚 -->
   <footer class="footer">
