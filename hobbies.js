@@ -2,20 +2,31 @@
   const galleries = document.querySelectorAll("[data-gallery]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  const resetPagePosition = () => {
+    if (!window.location.hash) window.scrollTo(0, 0);
+  };
+
+  resetPagePosition();
+  window.addEventListener("pageshow", () => {
+    window.requestAnimationFrame(resetPagePosition);
+  });
+
   const clamp = (value, minimum, maximum) => Math.min(Math.max(value, minimum), maximum);
 
-  const enableMouseDrag = (scroller, onRelease) => {
+  const enableDrag = (scroller, onRelease) => {
     let pointerId = null;
     let startX = 0;
+    let startY = 0;
     let startScrollLeft = 0;
     let moved = false;
     let suppressClick = false;
 
     scroller.addEventListener("pointerdown", (event) => {
-      if (event.pointerType !== "mouse" || event.button !== 0) return;
+      if (event.pointerType === "mouse" && event.button !== 0) return;
 
       pointerId = event.pointerId;
       startX = event.clientX;
+      startY = event.clientY;
       startScrollLeft = scroller.scrollLeft;
       moved = false;
     });
@@ -24,7 +35,8 @@
       if (event.pointerId !== pointerId) return;
 
       const distance = event.clientX - startX;
-      if (Math.abs(distance) > 4 && !moved) {
+      const verticalDistance = event.clientY - startY;
+      if (Math.abs(distance) > 6 && Math.abs(distance) > Math.abs(verticalDistance) && !moved) {
         moved = true;
         scroller.setPointerCapture(pointerId);
         scroller.classList.add("is-dragging");
@@ -132,11 +144,12 @@
       });
 
       const activeThumbnail = thumbnails[currentIndex];
-      if (activeThumbnail) {
-        activeThumbnail.scrollIntoView({
-          behavior: reduceMotion.matches ? "auto" : "smooth",
-          block: "nearest",
-          inline: "nearest"
+      if (activeThumbnail && thumbnailRail) {
+        const left = activeThumbnail.offsetLeft
+          - ((thumbnailRail.clientWidth - activeThumbnail.offsetWidth) / 2);
+        thumbnailRail.scrollTo({
+          left: Math.max(0, left),
+          behavior: reduceMotion.matches ? "auto" : "smooth"
         });
       }
     };
@@ -211,8 +224,8 @@
     viewport.addEventListener("pointerdown", unlockScrollSync, { passive: true });
     viewport.addEventListener("wheel", unlockScrollSync, { passive: true });
 
-    enableMouseDrag(viewport, () => goToSlide(nearestSlideIndex()));
-    if (thumbnailRail) enableMouseDrag(thumbnailRail);
+    enableDrag(viewport, () => goToSlide(nearestSlideIndex()));
+    if (thumbnailRail) enableDrag(thumbnailRail);
 
     window.addEventListener("resize", () => {
       const indexToKeep = currentIndex;
@@ -224,6 +237,16 @@
       }, 60);
     });
 
-    syncInterface(0);
+    const resetGalleryPosition = () => {
+      unlockScrollSync();
+      viewport.scrollLeft = 0;
+      if (thumbnailRail) thumbnailRail.scrollLeft = 0;
+      syncInterface(0);
+    };
+
+    resetGalleryPosition();
+    window.addEventListener("pageshow", () => {
+      window.requestAnimationFrame(resetGalleryPosition);
+    });
   });
 })();

@@ -124,6 +124,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.mobile-break {
+  display: none;
+}
+
 .social-links {
   margin-top: 10px;
   line-height: 1.8;
@@ -255,6 +259,7 @@ details ul li {
   gap: 10px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  touch-action: pan-y pinch-zoom;
   padding: 3px 3px 10px;
   scrollbar-color: #bf5700 #f0f0f0;
   scrollbar-width: thin;
@@ -347,6 +352,7 @@ details ul li {
 .gallery-viewport {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  touch-action: pan-y pinch-zoom;
   background: #f7f4f1;
   border-radius: 12px;
   scroll-padding-inline: var(--gallery-edge-space);
@@ -539,6 +545,10 @@ details ul li {
   .nav-links a {
     display: inline-block;
     margin: 5px 10px;
+  }
+
+  .mobile-break {
+    display: initial;
   }
 
   .hobbies-page {
